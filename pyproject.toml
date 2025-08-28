@@ -1,0 +1,24 @@
+# filepath: /home/alaeddin/MCP/mcp_docker/pyproject.toml
+[project]
+name = "mcp-docker"
+version = "0.1.0"
+description = "MCP Server Docker Container"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "geopy>=2.4.1",
+    "googlemaps>=4.10.0",
+    "homelab_utils",
+    "httpx>=0.24.0",
+    "mcp>=1.9.0",
+    "requests>=2.32.4",
+    "uvicorn>=0.23.0",
+]
+
+
+[[tool.uv.index]]
+name = "homelab"
+url = "http://192.168.0.81:8765/simple/"
+
+[tool.uv.sources]
+homelab_utils = { index = "homelab" }
